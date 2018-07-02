@@ -42,6 +42,14 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc
 
 Usually scientists want to focus on the algorithm, instead of scalability, underlying hardware infrastructure and high availability. [Azure Batch service](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes. There is no cluster or job scheduler software to install, manage, or scale. Instead, you use [Batch APIs and tools](https://docs.microsoft.com/en-us/azure/batch/batch-apis-tools), command-line scripts, or the Azure portal to configure, manage, and monitor your jobs.
 
+In this lab  you will learn how to deploy the Python SDK for Azure.
+
+1. Install Microsoft https://github.com/Azure/azure-sdk-for-python
+2. Git clone of https://github.com/hmeiland/batchprojects
+3. Update Batch and Storage account credential strings in batch-submit.py
+4. python batch_submit.py -i data/circular_burner.fds
+
+
 
 1. Update the deployment script [deploy_script.sh](https://github.com/lmiroslaw/azure-batch-ilastik/blob/master/deploy_script.sh)
 2. U
