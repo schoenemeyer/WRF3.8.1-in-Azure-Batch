@@ -3,7 +3,7 @@
 The purpose of this lab is to demonstrate the possibility of running WRF3.8.1 using Azure Batch.
 It uses the same source code and benchmark data as described in https://github.com/schoenemeyer/WRF3.8-in-Azure.git with Virtual Machine Scale Sets.
 
-The picture to the right shows the domain and the temperature and pressure after the 3rd hour of the 12km CONUS weather simulation.
+The picture to the left shows the domain and the temperature and pressure after the 3rd hour of the 12km CONUS weather simulation, the picture to the right the GUI of BatchLabs when running WRF on 4 nodes.
 
 <img src="https://github.com/schoenemeyer/WRF3.8-in-Azure/blob/master/4-Figure2-1.png" width="252"> <img src="https://github.com/schoenemeyer/WRF3.8.1-in-Azure-Batch/blob/master/batchrunning.JPG" width="392">
 
