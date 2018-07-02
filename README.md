@@ -18,8 +18,8 @@ https://www.youtube.com/watch?v=EMO6jreKi6o
 ## WRF CONUS 12km Benchmark
 In this benchmark from (http://www2.mmm.ucar.edu/wrf/WG2/benchv3) is used. You can download the input files as follows from http://www2.mmm.ucar.edu/WG2bench/conus12km_data_v3 or from Azure Blob Storage
 ```
-wget  https://hpccenth2lts.blob.core.windows.net/wrf/wrfrst_d01_2001-10-25_00_00_00
-wget  https://hpccenth2lts.blob.core.windows.net/wrf/wrfrst_d01_2001-10-25_00_00_00
+https://hpccenth2lts.blob.core.windows.net/wrf/wrfrst_d01_2001-10-25_00_00_00
+https://hpccenth2lts.blob.core.windows.net/wrf/wrfbdy_d01
 ```
 
 ## Performance in Azure
