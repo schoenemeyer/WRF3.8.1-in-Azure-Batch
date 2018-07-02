@@ -71,9 +71,9 @@ python batch_submit.py -i data/namelist.input
 
 ### Acknowledgement
 
-For the WRF model and the input data
-The University Corporation for Atmospheric Research
-The National Center for Atmospheric Research
-The UCAR Community Programs
+For the WRF model and the input data <br/>
+The University Corporation for Atmospheric Research <br/>
+The National Center for Atmospheric Research <br/>
+The UCAR Community Programs <br/>
 
 
