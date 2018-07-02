@@ -11,7 +11,6 @@ The picture to the right shows the domain and the temperature and pressure after
 
 Usually scientists want to focus on the algorithm, instead of scalability, underlying hardware infrastructure and high availability. [Azure Batch service](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes. There is no cluster or job scheduler software to install, manage, or scale. Instead, you use [Batch APIs and tools](https://docs.microsoft.com/en-us/azure/batch/batch-apis-tools), command-line scripts, or the Azure portal to configure, manage, and monitor your jobs.
 
-
 ## WRF CONUS 12km Benchmark
 In this benchmark from (http://www2.mmm.ucar.edu/wrf/WG2/benchv3) is used. We use the input files below from http://www2.mmm.ucar.edu/WG2bench/conus12km_data_v3 which are also available on Azure Blob Storage. The files are automatically downloaded during running this lab.
 ```
@@ -37,7 +36,7 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc
 
 ## Contents of the lab
 
-In this lab  you will learn how to deploy the Python SDK for Azure.
+In this lab  you will learn how to run WRF in Azure Batch using the Python SDK for Azure. Sinmply follow the steps below. The whole exercise should be finished in 30 min, if you have your account credential etc. ready.
 
 1. Install Microsoft Azure SDK for Python  https://github.com/Azure/azure-sdk-for-python
 2. Install BatchLabs for monitoring jobs in Azure Batch
@@ -56,15 +55,16 @@ In this lab  you will learn how to deploy the Python SDK for Azure.
 > _POOL_NODE_COUNT =  <br/>
 
 5. Run the Python Script. It will create the pool, the job and the task on the number of nodes automatically. For this particular lab we use H16r machines and CentOS-HPC 7.4.
-After the run has finished, the performance output is stored at the BLOB Storage.
+After the run has finished, the performance output is stored at the BLOB Storage in the folder wrf of your storage account.
 
 
 ```
 python batch_submit.py -i data/namelist.input
 ```
 
-6. Open Batchlabs and monitor the status.
-7. Install the Storage Explorer from https://azure.microsoft.com/en-us/features/storage-explorer/ to easily transfer your results 
+6. Open Batchlabs and monitor the status. You can see the status of the nodes, the total cost as well as current quota. Also after this exercise, you can change your preferred settings and make a request for increased quota.
+
+7. Install the Storage Explorer from https://azure.microsoft.com/en-us/features/storage-explorer/ to browse and easily transfer your results .
 
 
 ### Acknowledgement
