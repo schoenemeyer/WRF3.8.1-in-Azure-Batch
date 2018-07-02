@@ -45,9 +45,13 @@ Usually scientists want to focus on the algorithm, instead of scalability, under
 In this lab  you will learn how to deploy the Python SDK for Azure.
 
 1. Install Microsoft https://github.com/Azure/azure-sdk-for-python
-2. Git clone of https://github.com/hmeiland/batchprojects
+2. Git clone of https://github.com/schoenemeyer/WRF3.8.1-in-Azure-Batch
+3. Change to directory application 
+```
+ wget https://hpccenth2lts.blob.core.windows.net/wrf/wrf.zip
+```
 3. Update Batch and Storage account credential strings in batch-submit.py
-4. python batch_submit.py -i data/circular_burner.fds
+4. python batch_submit.py -i data/namelist.input
 
 
 
