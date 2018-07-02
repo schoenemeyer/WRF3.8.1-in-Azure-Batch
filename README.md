@@ -1,12 +1,15 @@
 ## Introduction
 
 The purpose of this lab is to demonstrate the possibility of running WRF3.8.1 using Azure Batch.
-It uses the same source code and benchmark data as described in https://github.com/schoenemeyer/WRF3.8-in-Azure.git
+It uses the same source code and benchmark data as described in https://github.com/schoenemeyer/WRF3.8-in-Azure.git with Virtual Machine Scale Sets.
 
 The picture to the right shows the domain and the temperature and pressure after the 3rd hour of the 12km CONUS weather simulation.
 
 <img src="https://github.com/schoenemeyer/WRF3.8-in-Azure/blob/master/4-Figure2-1.png" width="252">
 
+## Running WRF in Azure Batch
+
+Usually scientists want to focus on the algorithm, instead of scalability, underlying hardware infrastructure and high availability. [Azure Batch service](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes. There is no cluster or job scheduler software to install, manage, or scale. Instead, you use [Batch APIs and tools](https://docs.microsoft.com/en-us/azure/batch/batch-apis-tools), command-line scripts, or the Azure portal to configure, manage, and monitor your jobs.
 
 
 ## WRF CONUS 12km Benchmark
@@ -32,9 +35,7 @@ In addition to the substantial CPU power, the H-series offers diverse options fo
 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc
 
 
-## Running WRF in Azure Batch
 
-Usually scientists want to focus on the algorithm, instead of scalability, underlying hardware infrastructure and high availability. [Azure Batch service](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes. There is no cluster or job scheduler software to install, manage, or scale. Instead, you use [Batch APIs and tools](https://docs.microsoft.com/en-us/azure/batch/batch-apis-tools), command-line scripts, or the Azure portal to configure, manage, and monitor your jobs.
 
 In this lab  you will learn how to deploy the Python SDK for Azure.
 
