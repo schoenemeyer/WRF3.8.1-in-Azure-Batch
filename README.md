@@ -5,7 +5,7 @@ It uses the same source code and benchmark data as described in https://github.c
 
 The picture to the right shows the domain and the temperature and pressure after the 3rd hour of the 12km CONUS weather simulation.
 
-<img src="https://github.com/schoenemeyer/WRF3.8-in-Azure/blob/master/4-Figure2-1.png" width="252"> <img src="https://github.com/schoenemeyer/WRF3.8.1-in-Azure-Batch/blob/master/batchrunning.JPG" width="352">
+<img src="https://github.com/schoenemeyer/WRF3.8-in-Azure/blob/master/4-Figure2-1.png" width="252"> <img src="https://github.com/schoenemeyer/WRF3.8.1-in-Azure-Batch/blob/master/batchrunning.JPG" width="392">
 
 ## Running WRF in Azure Batch
 
