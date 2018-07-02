@@ -55,7 +55,7 @@ In this lab  you will learn how to deploy the Python SDK for Azure.
 > _STORAGE_ACCOUNT_KEY = <br/>
 > _POOL_NODE_COUNT =  <br/>
 
-5. Run the Python Script. It will create the pool, the job and the task on the number of nodes austomatically. For this particular lab we use H16r machines and CentOS-HPC 7.4.
+5. Run the Python Script. It will create the pool, the job and the task on the number of nodes automatically. For this particular lab we use H16r machines and CentOS-HPC 7.4.
 After the run has finished, the performance output is stored at the BLOB Storage.
 
 
