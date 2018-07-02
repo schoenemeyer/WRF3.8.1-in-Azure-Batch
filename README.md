@@ -55,83 +55,22 @@ In this lab  you will learn how to deploy the Python SDK for Azure.
 4. Update Batch and Storage account credential strings in batch-submit.py
 > _BATCH_ACCOUNT_NAME = <br/>
 > _BATCH_ACCOUNT_KEY = <br/>
-> _BATCH_ACCOUNT_URL = 
-> _STORAGE_ACCOUNT_NAME =
-> _STORAGE_ACCOUNT_KEY =
+> _BATCH_ACCOUNT_URL = <br/>
+> _STORAGE_ACCOUNT_NAME = <br/>
+> _STORAGE_ACCOUNT_KEY = <br/>
+> _POOL_NODE_COUNT =  <br/>
 
-5. python batch_submit.py -i data/namelist.input
+5. Run the Python Script. It will create the pool, the job and the task on the number of nodes austomatically. For this particular lab we use H16r machines and CentOS-HPC 7.4.
+After the run has finished, the performance output is stored at the BLOB Storage.
 
 
-1. Update the deployment script [deploy_script.sh](https://github.com/lmiroslaw/azure-batch-ilastik/blob/master/deploy_script.sh)
-2. U
-3
-
-```bash
- tar -cf runme.tar pixelClassification.ilp run_task.sh
- 
 ```
-The logic included in a separate runme.tar file and the input data are uploaded separately. The example includes a single input file .h5 that is uploaded multiple times. This way we can simulate real scenario with multiple input files: 
-
-
-
-where 'ilastik' is the pool name.  The script creates the pool:
-```
-poolid=ilastik
-GROUPID=demorg
-BATCHID=matlabb
-az batch account login -g $GROUPID -n $BATCHID
-
-az batch pool create --id $poolid --image "Canonical:UbuntuServer:16.04.0-LTS" --node-agent-sku-id "batch.node.ubuntu 16.04"  --vm-size Standard_D11 --verbose
+python batch_submit.py -i data/namelist.input
 ```
 
-assigns a json to a pool
-```
-az batch pool set --pool-id $poolid --json-file pool-shipyard.json 
-```
+6. Open Batchlabs and monitor the status.
+7. Install the Storage Explorer from https://azure.microsoft.com/en-us/features/storage-explorer/ to easily transfer your results 
 
-and resizes the pool. This is the moment when the VMs are provisioned and the deploy_script.sh executes on each machine.
-```
-az batch pool resize --pool-id $poolid --target-dedicated 2 
-```
-
-## Execution Phase
-
-5. Edit the script and provide missing data and execute the script [02.run_job.sh](https://github.com/lmiroslaw/azure-batch-ilastik/blob/master/02.run_job.sh) as follows:
-```
-./02.run_job.sh ilastik
-```
-
-## Monitoring your jobs
-
-We encourage to use [BatchLabs](https://github.com/Azure/BatchLabs) for monitoring purposes. In addition, these set of commands will help to deal with problems during the execution.
-
-
-
-* Remove the job
-> az batch job delete  --job-id $jobid  --account-endpoint $batchep --account-name $batchid --yes
-
-* We can check the status of the pool to see when it has finished resizing.
-> az batch pool show --pool-id $poolid  --account-endpoint $batchep --account-name $batchid
-
-* List the compute nodes running in a pool.
-> az batch node list --pool-id $poolid --account-endpoint $batchep --account-name $batchid -o table
-
-* List remote login connections for a specific node, for example *tvm-3550856927_1-20170904t111707z* 
-> az batch node remote-login-settings show --pool-id ilastik --node-id tvm-3550856927_1-20170904t111707z --account-endpoint $batchep --account-name $batchid -o table
-
-* Remove the pool
-> az batch pool delete --pool-id $poolid  --account-endpoint $batchep --account-name $batchid
-
-* Create the resource group and storage account. For example:
- ```
- az group create -n tilastik -l westeurope
- az storage account create -n ilastiksstorage -l westeurope -g tilastik
-```
-* Get the connection string for the Azure Storage
-> az storage account show-connection-string -n ilastiksstorage -g tilastik
-
-* Create the azure batch service
-> az batch account create -n bilastik -g tilastik
 
 ### Acknowledgement
 
