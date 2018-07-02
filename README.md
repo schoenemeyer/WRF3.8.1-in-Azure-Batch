@@ -11,6 +11,8 @@ The picture to the right shows the domain and the temperature and pressure after
 
 Usually scientists want to focus on the algorithm, instead of scalability, underlying hardware infrastructure and high availability. [Azure Batch service](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview) creates and manages a pool of compute nodes (virtual machines), installs the applications you want to run, and schedules jobs to run on the nodes. There is no cluster or job scheduler software to install, manage, or scale. Instead, you use [Batch APIs and tools](https://docs.microsoft.com/en-us/azure/batch/batch-apis-tools), command-line scripts, or the Azure portal to configure, manage, and monitor your jobs.
 
+If you are interested in just bringing up the cluster and run a Linpack HPL job for basic testing, you can clone the lab from https://github.com/hmeiland/batchprojects
+
 ## WRF CONUS 12km Benchmark
 In this benchmark from (http://www2.mmm.ucar.edu/wrf/WG2/benchv3) is used. We use the input files below from http://www2.mmm.ucar.edu/WG2bench/conus12km_data_v3 which are also available on Azure Blob Storage. The files are automatically downloaded during running this lab.
 ```
