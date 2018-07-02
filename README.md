@@ -35,7 +35,7 @@ In addition to the substantial CPU power, the H-series offers diverse options fo
 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc
 
 
-
+## Contents of the lab
 
 In this lab  you will learn how to deploy the Python SDK for Azure.
 
