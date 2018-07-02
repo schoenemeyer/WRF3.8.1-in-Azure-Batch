@@ -53,7 +53,8 @@ In this lab  you will learn how to deploy the Python SDK for Azure.
  wget https://hpccenth2lts.blob.core.windows.net/wrf/wrf.zip
 ```
 4. Update Batch and Storage account credential strings in batch-submit.py
- _BATCH_ACCOUNT_NAME =
+> _BATCH_ACCOUNT_NAME =
+
 5. python batch_submit.py -i data/namelist.input
 
 
