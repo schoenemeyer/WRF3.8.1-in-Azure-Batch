@@ -38,17 +38,18 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc
 
 ## Contents of the lab
 
-In this lab  you will learn how to run WRF in Azure Batch using the Python SDK for Azure. Sinmply follow the steps below. The whole exercise should be finished in 30 min, if you have your account credential etc. ready.
+In this lab  you will learn how to run WRF in Azure Batch using the Python SDK for Azure. Simply follow the steps below. The whole exercise should be finished in 30 min, if you have your account credential etc. ready.
 
-1. Install Microsoft Azure SDK for Python  https://github.com/Azure/azure-sdk-for-python
-2. Install BatchLabs for monitoring jobs in Azure Batch
+1. Create Batchaccount in Azure from the Azure Portal https://docs.microsoft.com/en-us/azure/batch/batch-account-create-portal
+2. Install Microsoft Azure SDK for Python  https://github.com/Azure/azure-sdk-for-python
+3. Install BatchLabs for monitoring jobs in Azure Batch
     https://azure.github.io/BatchLabs/
-2. Git clone of https://github.com/schoenemeyer/WRF3.8.1-in-Azure-Batch
-3. Change to directory application 
+4. Git clone of https://github.com/schoenemeyer/WRF3.8.1-in-Azure-Batch
+5. Change to directory application 
 ```
  wget https://hpccenth2lts.blob.core.windows.net/wrf/wrf.zip
 ```
-4. Update Batch and Storage account credential strings in batch-submit.py
+6. Update Batch and Storage account credential strings in batch-submit.py
 > _BATCH_ACCOUNT_NAME = <br/>
 > _BATCH_ACCOUNT_KEY = <br/>
 > _BATCH_ACCOUNT_URL = <br/>
