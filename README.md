@@ -64,6 +64,18 @@ After the run has finished, the performance output is stored at the BLOB Storage
 ```
 python batch_submit.py -i data/namelist.input
 ```
+If you read this error message after submitting, 
+
+``
+    SSL_ST_INIT = _lib.SSL_ST_INIT
+AttributeError: 'module' object has no attribute 'SSL_ST_INIT'
+
+```
+Please install the pyOpenSSL package.
+```
+pip  install pyOpenSSL
+```
+and rerun the job.
 
 6. Open Batchlabs and monitor the status. You can see the status of the nodes, the total cost as well as current quota. Also after this exercise, you can change your preferred settings and make a request for increased quota.
 
