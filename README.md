@@ -66,7 +66,7 @@ python batch_submit.py -i data/namelist.input
 ```
 If you read this error message after submitting, 
 
-``
+```
     SSL_ST_INIT = _lib.SSL_ST_INIT
 AttributeError: 'module' object has no attribute 'SSL_ST_INIT'
 
