@@ -71,7 +71,7 @@ If you read this error message after submitting,
 AttributeError: 'module' object has no attribute 'SSL_ST_INIT'
 
 ```
-Please install the pyOpenSSL package.
+you have to install the pyOpenSSL package.
 ```
 pip  install pyOpenSSL
 ```
