@@ -14,10 +14,10 @@ Usually scientists want to focus on the algorithm, instead of scalability, under
 If you are interested in just bringing up the cluster and run a Linpack HPL job for basic testing, you can clone the lab from https://github.com/hmeiland/batchprojects
 
 ## WRF CONUS 12km Benchmark
-In this benchmark from (http://www2.mmm.ucar.edu/wrf/WG2/benchv3) is used. We use the input files below from http://www2.mmm.ucar.edu/WG2bench/conus12km_data_v3 which are also available on Azure Blob Storage. The files are automatically downloaded during running this lab.
+In this benchmark from (http://www2.mmm.ucar.edu/wrf/WG2/benchv3) is used. We use the input files below from http://www2.mmm.ucar.edu/WG2bench/conus12km_data_v3 . The files need to be downloaded to your run directory before running this lab.
 ```
-https://hpccenth2lts.blob.core.windows.net/wrf/wrfrst_d01_2001-10-25_00_00_00
-https://hpccenth2lts.blob.core.windows.net/wrf/wrfbdy_d01
+wrfrst_d01_2001-10-25_00_00_00
+wrfbdy_d01
 ```
 
 ## Performance in Azure
